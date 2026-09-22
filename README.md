@@ -7,3 +7,7 @@
 ## CSS
 - ADD design
 - Take 49 min
+
+## JavaScript
+- ADD Function
+- Take 55 min
