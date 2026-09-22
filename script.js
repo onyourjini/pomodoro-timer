@@ -63,7 +63,7 @@ function tick() {
 
         if (currentMode === "focus") {
             completedPomodoros += 1;
-            sessionCount.textContent = 'Complete Promodoro: ${completedPomodoros}';
+            sessionCount.textContent = `Complete Promodoro: ${completedPomodoros}`;
             switchMode("short");
         } else {
             switchMode("focus");
