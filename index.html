@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focus Dest - Timer & To-Do</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+    <header>
+        <p class="kichker">Focus Desk</p>
+        <h1>Today Foucs Time</h1>
+    </header>
+
+    <div class="layout">
+        <section class="card timer-card">
+            <div class="mode-row">
+                <button class="mode-btn active" data-mode="focus">Focus 25min</button>
+                <button class="mode-btn" data-mode="short">Short Break 5min</button>
+                <button class="mode-btn" data-mode="long">Long Break 15min</button>
+            </div>
+            <div class="dial">
+                <svg width="220" height="220" viewBox="0 0 220 220">
+                    <circle class="dial-track" cx="110" cy="110" r="100"></circle>
+                    <circle class="dial-progress" id="dialProgress" cx="110" cy="110" r="100" stroke-dasharray="628.3" stroke-dashoffset="0"></circle>
+                </svg>
+                <div class="dial-time" id="timeDisplay">25:00</div>
+            </div>
+
+            <p class="dial-labe" id="stateLabel">Ready to Focus</p>
+            <div class="controls">
+                <button class="btn" id="startPauseBtn">Start</button>
+                <button class="btn secondary" id="resetBtn">Reset</button>
+            </div>
+
+            <p class="session-count" id="sessionCount">Complete Promodoro</p>
+        </section>
+
+        <section class="card todo-card">
+            <h2>To-do</h2>
+            <div class="todo-input-row">
+                <input type="text" id="todoInput" placeholder="Enter To-do">
+                <button id="addTodoBtn">Add</button>
+            </div>
+
+            <ul class="todo-list" id="todoList"></ul>
+            <p class="todo-footer" id="todoFooter"></p>
+        </section>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
