@@ -9,7 +9,6 @@ let totalSeconds = MODES.focus.seconds;
 let remainingSeconds = totalSeconds;
 let timerId = null;
 let isRunning = false;
-let completedPomodoros = 0;
 
 const timeDisplay   = document.getElementById("timeDisplay");
 const stateLabel    = document.getElementById("stateLabel");
@@ -60,14 +59,6 @@ function tick() {
         clearInterval(timerId);
         isRunning = false;
         startPauseBtn.textContent = "Start";
-
-        if (currentMode === "focus") {
-            completedPomodoros += 1;
-            sessionCount.textContent = `Complete Promodoro: ${completedPomodoros}`;
-            switchMode("short");
-        } else {
-            switchMode("focus");
-        }
     }
 }
 
